@@ -9,7 +9,7 @@ const usuarioSchema = new mongoose_1.Schema({
     },
     avatar: {
         type: String,
-        defualt: "av-1.png",
+        default: "av-1.png",
     },
     email: {
         type: String,

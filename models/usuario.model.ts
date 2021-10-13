@@ -7,7 +7,7 @@ const usuarioSchema = new Schema({
   },
   avatar: {
     type: String,
-    defualt: "av-1.png",
+    default: "av-1.png",
   },
   email: {
     type: String,
