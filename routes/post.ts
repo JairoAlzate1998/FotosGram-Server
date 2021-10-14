@@ -76,4 +76,11 @@ postRoutes.post('/upload', [ verificaToken ], async (req: any, res: Response) =>
 
 });
 
+postRoutes.get('/imagen/:userId/:img', (req: any, res: Response) => {
+  const userId = req.params.userId;
+  const img = req.params.img;
+  const pathFoto = fileSystem.getFotoUrl(userId, img);
+  res.sendFile( pathFoto );
+});
+
 export default postRoutes;
