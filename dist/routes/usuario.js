@@ -108,4 +108,11 @@ userRoutes.post('/update', autenticacion_1.verificaToken, (req, res) => {
         usuario: req.usuario
     });
 });
+userRoutes.get('/', [autenticacion_1.verificaToken], (req, res) => {
+    const usuario = req.usuario;
+    res.json({
+        ok: true,
+        usuario
+    });
+});
 exports.default = userRoutes;
